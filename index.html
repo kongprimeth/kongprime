@@ -7,77 +7,109 @@
 <meta name="description" content="KONG PRIME ร้านพรีออเดอร์เครื่องสำอาง/สกินแคร์ของแท้ 100% หิ้วตรงจากเว็บนอกน่าเชื่อถือ คัดแบรนด์คุณภาพที่ยังไม่มีในไทย QC ก่อนส่งทุกชิ้น">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Sarabun:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,500&family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --gold:#C9A86A; --gold-dk:#a8884d; --cream:#FBF6F0; --espresso:#3E2C23;
-    --ink:#2c211b; --muted:#7a6a5f; --line:#e7ddd0;
+    --gold:#C9A86A; --gold-lt:#e3cda0; --gold-dk:#a8884d; --cream:#FBF6F0;
+    --espresso:#3E2C23; --espresso-dk:#2a1d17; --ink:#2c211b; --muted:#7a6a5f; --line:#ece2d4;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{font-family:'Sarabun',sans-serif;color:var(--ink);background:var(--cream);line-height:1.7}
-  h1,h2,h3,.brandmark{font-family:'Playfair Display',serif;letter-spacing:.5px}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  body{font-family:'Sarabun',sans-serif;color:var(--ink);background:var(--cream);line-height:1.75;overflow-x:hidden}
+  h1,h2,h3,.serif{font-family:'Playfair Display',serif}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
   a{color:inherit;text-decoration:none}
-  .btn{display:inline-block;padding:13px 28px;border-radius:40px;font-weight:600;font-size:15px;transition:.2s}
-  .btn-gold{background:var(--gold);color:#fff}
-  .btn-gold:hover{background:var(--gold-dk)}
-  .btn-out{border:1.5px solid var(--espresso);color:var(--espresso)}
-  .btn-out:hover{background:var(--espresso);color:var(--cream)}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:15px 32px;border-radius:50px;font-weight:600;font-size:15px;transition:.25s;letter-spacing:.3px}
+  .btn-gold{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dk) 100%);color:#fff;box-shadow:0 8px 24px rgba(168,136,77,.32)}
+  .btn-gold:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(168,136,77,.42)}
+  .btn-out{border:1.5px solid rgba(255,255,255,.55);color:#fff}
+  .btn-out:hover{background:#fff;color:var(--espresso);border-color:#fff}
 
-  nav{position:sticky;top:0;z-index:50;background:rgba(251,246,240,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-  .nav-in{display:flex;align-items:center;justify-content:space-between;height:66px}
-  .brandmark{font-size:22px;font-weight:700;color:var(--espresso);letter-spacing:3px}
-  .nav-links{display:flex;gap:28px;align-items:center}
-  .nav-links a{font-size:15px;color:var(--muted)}
+  .topbar{background:var(--espresso-dk);color:var(--gold-lt);text-align:center;font-size:13.5px;letter-spacing:.5px;padding:9px 16px;font-weight:600}
+
+  nav{position:sticky;top:0;z-index:60;background:rgba(251,246,240,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brandmark{font-family:'Playfair Display',serif;font-size:22px;font-weight:800;color:var(--espresso);letter-spacing:4px}
+  .nav-links{display:flex;gap:30px;align-items:center}
+  .nav-links a{font-size:15px;color:var(--muted);position:relative}
   .nav-links a:hover{color:var(--espresso)}
-  .menu-cta{background:var(--gold);color:#fff;padding:9px 20px;border-radius:30px;font-weight:600}
-  @media(max-width:760px){.nav-links a:not(.menu-cta){display:none}}
+  .menu-cta{background:var(--gold);color:#fff!important;padding:9px 22px;border-radius:30px;font-weight:600}
+  @media(max-width:780px){.nav-links a:not(.menu-cta){display:none}}
 
-  .hero{text-align:center;padding:90px 0 80px;background:radial-gradient(60% 90% at 50% 0%, #fff 0%, var(--cream) 70%)}
-  .hero .logo-slot{width:96px;height:96px;margin:0 auto 22px;border-radius:50%;border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;background:#fff;overflow:hidden}
-  .hero .logo-slot img{width:100%;height:100%;object-fit:cover}
-  .hero .logo-fallback{font-family:'Playfair Display',serif;font-weight:700;color:var(--gold-dk);font-size:13px;letter-spacing:1px;text-align:center}
-  .hero h1{font-size:54px;color:var(--espresso);letter-spacing:6px;line-height:1.15}
-  .hero .tag{color:var(--gold-dk);font-size:19px;margin-top:14px;font-weight:600}
-  .hero .trust{color:var(--muted);margin-top:8px;font-size:15px}
-  .hero .cta{margin-top:32px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .hero{position:relative;text-align:center;padding:110px 0 96px;color:#fff;overflow:hidden;
+        background:radial-gradient(120% 120% at 50% 0%, #5a4234 0%, var(--espresso) 45%, var(--espresso-dk) 100%)}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(40% 50% at 50% 18%, rgba(201,168,106,.30), transparent 70%);pointer-events:none}
+  .glow{position:absolute;border-radius:50%;filter:blur(60px);opacity:.5}
+  .glow.a{width:340px;height:340px;background:rgba(201,168,106,.45);top:-60px;left:-60px}
+  .glow.b{width:300px;height:300px;background:rgba(227,205,160,.25);bottom:-80px;right:-40px}
+  .hero .inner{position:relative;z-index:2;animation:rise .9s ease both}
+  @keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+  .eyebrow{display:inline-block;border:1px solid rgba(201,168,106,.5);color:var(--gold-lt);border-radius:40px;padding:7px 18px;font-size:13px;letter-spacing:2px;margin-bottom:26px;font-weight:600}
+  .logo-slot{width:104px;height:104px;margin:0 auto 24px;border-radius:50%;background:#fff;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,.35)}
+  .logo-slot img{width:100%;height:100%;object-fit:cover}
+  .logo-fallback{display:none;font-family:'Playfair Display',serif;font-weight:800;color:var(--gold-dk);font-size:14px;letter-spacing:1px}
+  .hero h1{font-size:64px;font-weight:800;letter-spacing:8px;line-height:1.1;text-shadow:0 2px 30px rgba(0,0,0,.3)}
+  .divider{width:64px;height:2px;background:var(--gold);margin:20px auto 18px;border-radius:2px}
+  .hero .tag{font-family:'Playfair Display',serif;font-style:italic;color:var(--gold-lt);font-size:23px}
+  .hero .trust{color:rgba(255,255,255,.78);margin-top:14px;font-size:15px;letter-spacing:.5px}
+  .hero .cta{margin-top:38px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+  @media(max-width:600px){.hero h1{font-size:42px;letter-spacing:5px}.hero{padding:80px 0 70px}}
 
-  section{padding:70px 0}
-  .sec-title{text-align:center;font-size:32px;color:var(--espresso);margin-bottom:10px}
-  .sec-sub{text-align:center;color:var(--muted);margin-bottom:44px}
+  .stats{background:var(--espresso-dk);color:#fff}
+  .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1px}
+  @media(max-width:680px){.stats .wrap{grid-template-columns:1fr 1fr}}
+  .stat{text-align:center;padding:26px 12px}
+  .stat b{display:block;font-family:'Playfair Display',serif;font-size:26px;color:var(--gold-lt)}
+  .stat span{font-size:13px;color:rgba(255,255,255,.65)}
 
-  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  @media(max-width:760px){.cards{grid-template-columns:1fr}}
-  .card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px 26px;text-align:center}
-  .card .ic{font-size:30px}
-  .card h3{font-size:20px;color:var(--espresso);margin:12px 0 8px}
+  section{padding:84px 0}
+  .sec-title{text-align:center;font-size:36px;font-weight:700;color:var(--espresso);margin-bottom:8px}
+  .sec-sub{text-align:center;color:var(--muted);margin-bottom:50px;font-size:16px}
+
+  .reveal{opacity:0;transform:translateY(26px);transition:.7s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  @media(max-width:780px){.cards{grid-template-columns:1fr}}
+  .card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:36px 28px;text-align:center;position:relative;overflow:hidden;transition:.3s}
+  .card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--gold),var(--gold-lt))}
+  .card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(62,44,35,.10)}
+  .card .ic{font-size:34px}
+  .card h3{font-size:21px;color:var(--espresso);margin:14px 0 8px}
   .card p{color:var(--muted);font-size:15px}
 
-  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-  @media(max-width:760px){.steps{grid-template-columns:1fr 1fr}}
-  .step{position:relative;background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:26px 18px;text-align:center}
-  .step .n{width:38px;height:38px;border-radius:50%;background:var(--gold);color:#fff;font-family:'Playfair Display',serif;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 12px}
-  .step b{display:block;color:var(--espresso);margin-bottom:4px}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  @media(max-width:780px){.steps{grid-template-columns:1fr 1fr}}
+  .step{background:var(--cream);border:1px solid var(--line);border-radius:18px;padding:30px 18px;text-align:center;transition:.3s}
+  .step:hover{border-color:var(--gold);transform:translateY(-4px)}
+  .step .n{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-dk));color:#fff;font-family:'Playfair Display',serif;font-weight:700;font-size:18px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;box-shadow:0 6px 16px rgba(168,136,77,.3)}
+  .step b{display:block;color:var(--espresso);margin-bottom:4px;font-size:16px}
   .step span{color:var(--muted);font-size:14px}
 
-  .brandsec{background:var(--espresso);color:var(--cream)}
+  .brandsec{background:radial-gradient(120% 120% at 50% 0,#5a4234,var(--espresso) 60%);color:var(--cream)}
   .brandsec .sec-title{color:#fff}
   .brandsec .sec-sub{color:#d8c8b8}
-  .chips{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
-  .chip{border:1px solid rgba(255,255,255,.3);border-radius:30px;padding:11px 24px;font-weight:600;letter-spacing:.5px}
+  .chips{display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
+  .chip{border:1px solid rgba(201,168,106,.45);border-radius:40px;padding:13px 28px;font-weight:600;letter-spacing:.5px;transition:.25s}
+  .chip:hover{background:rgba(201,168,106,.15);border-color:var(--gold-lt)}
 
-  .contact{text-align:center}
-  .social{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:26px}
-  .social a{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 26px;font-weight:600;color:var(--espresso);min-width:140px;transition:.2s}
-  .social a:hover{border-color:var(--gold);transform:translateY(-2px)}
-  .social a small{display:block;color:var(--muted);font-weight:400;font-size:12px;margin-top:2px}
+  .ctaband{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dk) 100%);color:#fff;text-align:center}
+  .ctaband h2{font-size:34px;font-weight:800;margin-bottom:10px}
+  .ctaband p{opacity:.92;margin-bottom:28px}
 
-  footer{background:#241a14;color:#b9a892;text-align:center;padding:32px 0;font-size:14px}
-  .note{background:#fff7e8;border:1px dashed var(--gold);border-radius:10px;color:#8a6d2f;font-size:13px;padding:8px 14px;display:inline-block;margin-top:14px}
+  .social{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+  .social a{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 28px;font-weight:600;color:var(--espresso);min-width:150px;text-align:center;transition:.25s}
+  .social a:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 12px 26px rgba(62,44,35,.08)}
+  .social a small{display:block;color:var(--muted);font-weight:400;font-size:12px;margin-top:3px}
+
+  footer{background:var(--espresso-dk);color:#b9a892;text-align:center;padding:40px 0;font-size:14px}
+  footer .fb{font-family:'Playfair Display',serif;font-size:22px;font-weight:800;color:var(--gold-lt);letter-spacing:4px;margin-bottom:8px}
+  .note{background:#fff7e8;border:1px dashed var(--gold);border-radius:10px;color:#8a6d2f;font-size:12.5px;padding:8px 14px;display:inline-block;margin-top:16px}
 </style>
 </head>
 <body>
+
+<div class="topbar">✨ เปิดรับพรีออเดอร์แล้ว · ปิดรอบทุกศุกร์ · ของแท้ 100% หิ้วตรงจากเว็บนอก</div>
 
 <nav>
   <div class="wrap nav-in">
@@ -93,26 +125,38 @@
 </nav>
 
 <header class="hero">
-  <div class="wrap">
+  <span class="glow a"></span><span class="glow b"></span>
+  <div class="wrap inner">
+    <span class="eyebrow">IMPORTED BEAUTY · PRE-ORDER</span>
     <div class="logo-slot">
-      <img src="assets/logo.png" alt="KONG PRIME logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-      <div class="logo-fallback" style="display:none">KONG<br>PRIME</div>
+      <img src="assets/logo.png" alt="KONG PRIME logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="logo-fallback">KONG<br>PRIME</div>
     </div>
     <h1>KONG PRIME</h1>
+    <div class="divider"></div>
     <div class="tag">พรีออเดอร์บิวตี้ของแท้ จากเว็บนอก</div>
-    <div class="trust">ของแท้ 100% · QC ก่อนส่งทุกชิ้น · ปิดรอบพรีทุกศุกร์ 🇰🇷🇬🇧🇺🇸</div>
+    <div class="trust">ของแท้ 100% · QC ก่อนส่งทุกชิ้น · 🇰🇷 🇬🇧 🇺🇸</div>
     <div class="cta">
-      <a href="#" class="btn btn-gold">สั่งซื้อบน Shopee</a>
-      <a href="#" class="btn btn-out">สั่งซื้อบน TikTok Shop</a>
+      <a href="#" class="btn btn-gold">🛒 สั่งซื้อบน Shopee</a>
+      <a href="#" class="btn btn-out">🎵 สั่งซื้อบน TikTok Shop</a>
     </div>
-    <div class="note">แก้ลิงก์ปุ่ม "สั่งซื้อ" ในไฟล์ index.html หลังเปิดร้าน</div>
+    <div class="note" style="background:rgba(255,255,255,.08);border-color:rgba(201,168,106,.5);color:var(--gold-lt)">แก้ลิงก์ปุ่ม "สั่งซื้อ" ในไฟล์ index.html หลังเปิดร้าน</div>
   </div>
 </header>
 
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><b>100%</b><span>ของแท้ การันตี</span></div>
+    <div class="stat"><b>5</b><span>เว็บต้นทางทั่วโลก</span></div>
+    <div class="stat"><b>QC</b><span>ตรวจทุกชิ้นก่อนส่ง</span></div>
+    <div class="stat"><b>ทุกศุกร์</b><span>ปิดรอบพรีออเดอร์</span></div>
+  </div>
+</div>
+
 <section id="about">
-  <div class="wrap" style="max-width:760px;text-align:center">
+  <div class="wrap reveal" style="max-width:780px;text-align:center">
     <h2 class="sec-title">เกี่ยวกับเรา</h2>
-    <p style="color:var(--muted);font-size:17px">
+    <p style="color:var(--muted);font-size:17.5px">
       KONG PRIME คือร้านรับพรีออเดอร์เครื่องสำอางและสกินแคร์ <b>ของแท้ 100%</b>
       หิ้วตรงจากเว็บต้นทางที่น่าเชื่อถือทั่วโลก — Olive Young, YesStyle, Stylevana, Lookfantastic และ iHerb
       เราคัดเฉพาะ <b>แบรนด์คุณภาพและตัวกระแส</b> ที่ยังไม่เปิดขายอย่างเป็นทางการในไทยหรือหาซื้อยาก
@@ -123,34 +167,34 @@
 
 <section id="why" style="background:#fff">
   <div class="wrap">
-    <h2 class="sec-title">ทำไมต้องเรา</h2>
-    <p class="sec-sub">จุดแข็งที่ทำให้คุณวางใจ</p>
+    <h2 class="sec-title reveal">ทำไมต้องเรา</h2>
+    <p class="sec-sub reveal">จุดแข็งที่ทำให้คุณวางใจ</p>
     <div class="cards">
-      <div class="card"><div class="ic">✅</div><h3>ของแท้ 100%</h3><p>หิ้วตรงจากเว็บต้นทางทางการ ไม่ใช่ของก๊อป มีหลักฐานการสั่งซื้อ</p></div>
-      <div class="card"><div class="ic">🔍</div><h3>QC ก่อนส่ง</h3><p>ตรวจสภาพสินค้าทุกชิ้นก่อนแพ็ก ส่งถึงมือคุณอย่างมั่นใจ</p></div>
-      <div class="card"><div class="ic">💎</div><h3>แบรนด์หายาก</h3><p>คัดตัวคุณภาพ/กระแสที่ยังไม่มีในไทย ให้คุณได้ก่อนใคร</p></div>
+      <div class="card reveal"><div class="ic">✅</div><h3>ของแท้ 100%</h3><p>หิ้วตรงจากเว็บต้นทางทางการ ไม่ใช่ของก๊อป มีหลักฐานการสั่งซื้อ</p></div>
+      <div class="card reveal"><div class="ic">🔍</div><h3>QC ก่อนส่ง</h3><p>ตรวจสภาพสินค้าทุกชิ้นก่อนแพ็ก ส่งถึงมือคุณอย่างมั่นใจ</p></div>
+      <div class="card reveal"><div class="ic">💎</div><h3>แบรนด์หายาก</h3><p>คัดตัวคุณภาพ/กระแสที่ยังไม่มีในไทย ให้คุณได้ก่อนใคร</p></div>
     </div>
   </div>
 </section>
 
 <section id="how">
   <div class="wrap">
-    <h2 class="sec-title">พรีออเดอร์ทำงานยังไง</h2>
-    <p class="sec-sub">ง่าย 4 ขั้นตอน</p>
+    <h2 class="sec-title reveal">พรีออเดอร์ทำงานยังไง</h2>
+    <p class="sec-sub reveal">ง่าย 4 ขั้นตอน</p>
     <div class="steps">
-      <div class="step"><div class="n">1</div><b>เลือก & สั่ง</b><span>ทักแชตหรือกดสั่งในร้าน ปิดรอบทุกศุกร์</span></div>
-      <div class="step"><div class="n">2</div><b>เราสั่งหิ้ว</b><span>สั่งตรงจากเว็บต้นทางของแท้</span></div>
-      <div class="step"><div class="n">3</div><b>ของเข้า & QC</b><span>ตรวจสภาพทุกชิ้นก่อนแพ็ก</span></div>
-      <div class="step"><div class="n">4</div><b>ส่งถึงมือคุณ</b><span>แพ็กอย่างดี ส่งไว มีเลขแทร็ก</span></div>
+      <div class="step reveal"><div class="n">1</div><b>เลือก &amp; สั่ง</b><span>ทักแชตหรือกดสั่งในร้าน ปิดรอบทุกศุกร์</span></div>
+      <div class="step reveal"><div class="n">2</div><b>เราสั่งหิ้ว</b><span>สั่งตรงจากเว็บต้นทางของแท้</span></div>
+      <div class="step reveal"><div class="n">3</div><b>ของเข้า &amp; QC</b><span>ตรวจสภาพทุกชิ้นก่อนแพ็ก</span></div>
+      <div class="step reveal"><div class="n">4</div><b>ส่งถึงมือคุณ</b><span>แพ็กอย่างดี ส่งไว มีเลขแทร็ก</span></div>
     </div>
   </div>
 </section>
 
 <section class="brandsec">
   <div class="wrap">
-    <h2 class="sec-title">เราหิ้วจากที่ไหน</h2>
-    <p class="sec-sub">เฉพาะเว็บต้นทางที่น่าเชื่อถือ</p>
-    <div class="chips">
+    <h2 class="sec-title reveal">เราหิ้วจากที่ไหน</h2>
+    <p class="sec-sub reveal">เฉพาะเว็บต้นทางที่น่าเชื่อถือ</p>
+    <div class="chips reveal">
       <div class="chip">Olive Young 🇰🇷</div>
       <div class="chip">YesStyle 🇰🇷</div>
       <div class="chip">Stylevana 🇰🇷</div>
@@ -160,11 +204,19 @@
   </div>
 </section>
 
-<section id="contact" class="contact">
+<section class="ctaband">
+  <div class="wrap reveal">
+    <h2>พร้อมได้ของดีก่อนใครหรือยัง?</h2>
+    <p>ทักแชตจองรอบพรีออเดอร์นี้ได้เลย ปิดรอบทุกศุกร์</p>
+    <a href="#contact" class="btn btn-out" style="border-color:#fff">ทักแชต / สั่งซื้อ →</a>
+  </div>
+</section>
+
+<section id="contact" style="text-align:center">
   <div class="wrap">
-    <h2 class="sec-title">สั่งซื้อ & ติดต่อเรา</h2>
-    <p class="sec-sub">ทักได้ทุกช่องทาง ตอบไว</p>
-    <div class="social">
+    <h2 class="sec-title reveal">สั่งซื้อ &amp; ติดต่อเรา</h2>
+    <p class="sec-sub reveal">ทักได้ทุกช่องทาง ตอบไว</p>
+    <div class="social reveal">
       <a href="#">🛒 Shopee<small>กดสั่งซื้อ</small></a>
       <a href="#">🎵 TikTok Shop<small>กดสั่งซื้อ</small></a>
       <a href="#">📘 Facebook<small>ทักแชต</small></a>
@@ -176,9 +228,14 @@
 </section>
 
 <footer>
-  © 2026 KONG PRIME · พรีออเดอร์บิวตี้ของแท้ จากเว็บนอก<br>
-  ของแท้ 100% · QC ก่อนส่ง · ปิดรอบพรีทุกศุกร์
+  <div class="fb">KONG PRIME</div>
+  พรีออเดอร์บิวตี้ของแท้ จากเว็บนอก · ของแท้ 100% · QC ก่อนส่ง · ปิดรอบพรีทุกศุกร์<br>
+  <span style="opacity:.7">© 2026 KONG PRIME · kong-prime.shop</span>
 </footer>
 
+<script>
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%3*0.08)+'s';io.observe(el)});
+</script>
 </body>
 </html>

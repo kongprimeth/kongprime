@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KONG PRIME — พรีออเดอร์บิวตี้ของแท้ จากเว็บนอก</title>
+<meta name="description" content="KONG PRIME ร้านพรีออเดอร์เครื่องสำอาง/สกินแคร์ของแท้ 100% หิ้วตรงจากเว็บนอกน่าเชื่อถือ คัดแบรนด์คุณภาพที่ยังไม่มีในไทย QC ก่อนส่งทุกชิ้น">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Sarabun:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --gold:#C9A86A; --gold-dk:#a8884d; --cream:#FBF6F0; --espresso:#3E2C23;
+    --ink:#2c211b; --muted:#7a6a5f; --line:#e7ddd0;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Sarabun',sans-serif;color:var(--ink);background:var(--cream);line-height:1.7}
+  h1,h2,h3,.brandmark{font-family:'Playfair Display',serif;letter-spacing:.5px}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  a{color:inherit;text-decoration:none}
+  .btn{display:inline-block;padding:13px 28px;border-radius:40px;font-weight:600;font-size:15px;transition:.2s}
+  .btn-gold{background:var(--gold);color:#fff}
+  .btn-gold:hover{background:var(--gold-dk)}
+  .btn-out{border:1.5px solid var(--espresso);color:var(--espresso)}
+  .btn-out:hover{background:var(--espresso);color:var(--cream)}
+
+  nav{position:sticky;top:0;z-index:50;background:rgba(251,246,240,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brandmark{font-size:22px;font-weight:700;color:var(--espresso);letter-spacing:3px}
+  .nav-links{display:flex;gap:28px;align-items:center}
+  .nav-links a{font-size:15px;color:var(--muted)}
+  .nav-links a:hover{color:var(--espresso)}
+  .menu-cta{background:var(--gold);color:#fff;padding:9px 20px;border-radius:30px;font-weight:600}
+  @media(max-width:760px){.nav-links a:not(.menu-cta){display:none}}
+
+  .hero{text-align:center;padding:90px 0 80px;background:radial-gradient(60% 90% at 50% 0%, #fff 0%, var(--cream) 70%)}
+  .hero .logo-slot{width:96px;height:96px;margin:0 auto 22px;border-radius:50%;border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;background:#fff;overflow:hidden}
+  .hero .logo-slot img{width:100%;height:100%;object-fit:cover}
+  .hero .logo-fallback{font-family:'Playfair Display',serif;font-weight:700;color:var(--gold-dk);font-size:13px;letter-spacing:1px;text-align:center}
+  .hero h1{font-size:54px;color:var(--espresso);letter-spacing:6px;line-height:1.15}
+  .hero .tag{color:var(--gold-dk);font-size:19px;margin-top:14px;font-weight:600}
+  .hero .trust{color:var(--muted);margin-top:8px;font-size:15px}
+  .hero .cta{margin-top:32px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+  section{padding:70px 0}
+  .sec-title{text-align:center;font-size:32px;color:var(--espresso);margin-bottom:10px}
+  .sec-sub{text-align:center;color:var(--muted);margin-bottom:44px}
+
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  @media(max-width:760px){.cards{grid-template-columns:1fr}}
+  .card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px 26px;text-align:center}
+  .card .ic{font-size:30px}
+  .card h3{font-size:20px;color:var(--espresso);margin:12px 0 8px}
+  .card p{color:var(--muted);font-size:15px}
+
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  @media(max-width:760px){.steps{grid-template-columns:1fr 1fr}}
+  .step{position:relative;background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:26px 18px;text-align:center}
+  .step .n{width:38px;height:38px;border-radius:50%;background:var(--gold);color:#fff;font-family:'Playfair Display',serif;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 12px}
+  .step b{display:block;color:var(--espresso);margin-bottom:4px}
+  .step span{color:var(--muted);font-size:14px}
+
+  .brandsec{background:var(--espresso);color:var(--cream)}
+  .brandsec .sec-title{color:#fff}
+  .brandsec .sec-sub{color:#d8c8b8}
+  .chips{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+  .chip{border:1px solid rgba(255,255,255,.3);border-radius:30px;padding:11px 24px;font-weight:600;letter-spacing:.5px}
+
+  .contact{text-align:center}
+  .social{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+  .social a{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 26px;font-weight:600;color:var(--espresso);min-width:140px;transition:.2s}
+  .social a:hover{border-color:var(--gold);transform:translateY(-2px)}
+  .social a small{display:block;color:var(--muted);font-weight:400;font-size:12px;margin-top:2px}
+
+  footer{background:#241a14;color:#b9a892;text-align:center;padding:32px 0;font-size:14px}
+  .note{background:#fff7e8;border:1px dashed var(--gold);border-radius:10px;color:#8a6d2f;font-size:13px;padding:8px 14px;display:inline-block;margin-top:14px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-in">
+    <div class="brandmark">KONG PRIME</div>
+    <div class="nav-links">
+      <a href="#about">เกี่ยวกับเรา</a>
+      <a href="#why">ทำไมต้องเรา</a>
+      <a href="#how">พรีออเดอร์</a>
+      <a href="#contact">ติดต่อ</a>
+      <a href="#contact" class="menu-cta">ช้อปเลย</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="logo-slot">
+      <img src="assets/logo.png" alt="KONG PRIME logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <div class="logo-fallback" style="display:none">KONG<br>PRIME</div>
+    </div>
+    <h1>KONG PRIME</h1>
+    <div class="tag">พรีออเดอร์บิวตี้ของแท้ จากเว็บนอก</div>
+    <div class="trust">ของแท้ 100% · QC ก่อนส่งทุกชิ้น · ปิดรอบพรีทุกศุกร์ 🇰🇷🇬🇧🇺🇸</div>
+    <div class="cta">
+      <a href="#" class="btn btn-gold">สั่งซื้อบน Shopee</a>
+      <a href="#" class="btn btn-out">สั่งซื้อบน TikTok Shop</a>
+    </div>
+    <div class="note">แก้ลิงก์ปุ่ม "สั่งซื้อ" ในไฟล์ index.html หลังเปิดร้าน</div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap" style="max-width:760px;text-align:center">
+    <h2 class="sec-title">เกี่ยวกับเรา</h2>
+    <p style="color:var(--muted);font-size:17px">
+      KONG PRIME คือร้านรับพรีออเดอร์เครื่องสำอางและสกินแคร์ <b>ของแท้ 100%</b>
+      หิ้วตรงจากเว็บต้นทางที่น่าเชื่อถือทั่วโลก — Olive Young, YesStyle, Stylevana, Lookfantastic และ iHerb
+      เราคัดเฉพาะ <b>แบรนด์คุณภาพและตัวกระแส</b> ที่ยังไม่เปิดขายอย่างเป็นทางการในไทยหรือหาซื้อยาก
+      ให้คุณได้ของดีก่อนใคร ในราคาที่สมเหตุผล พร้อม QC ทุกชิ้นก่อนส่ง
+    </p>
+  </div>
+</section>
+
+<section id="why" style="background:#fff">
+  <div class="wrap">
+    <h2 class="sec-title">ทำไมต้องเรา</h2>
+    <p class="sec-sub">จุดแข็งที่ทำให้คุณวางใจ</p>
+    <div class="cards">
+      <div class="card"><div class="ic">✅</div><h3>ของแท้ 100%</h3><p>หิ้วตรงจากเว็บต้นทางทางการ ไม่ใช่ของก๊อป มีหลักฐานการสั่งซื้อ</p></div>
+      <div class="card"><div class="ic">🔍</div><h3>QC ก่อนส่ง</h3><p>ตรวจสภาพสินค้าทุกชิ้นก่อนแพ็ก ส่งถึงมือคุณอย่างมั่นใจ</p></div>
+      <div class="card"><div class="ic">💎</div><h3>แบรนด์หายาก</h3><p>คัดตัวคุณภาพ/กระแสที่ยังไม่มีในไทย ให้คุณได้ก่อนใคร</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <h2 class="sec-title">พรีออเดอร์ทำงานยังไง</h2>
+    <p class="sec-sub">ง่าย 4 ขั้นตอน</p>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><b>เลือก & สั่ง</b><span>ทักแชตหรือกดสั่งในร้าน ปิดรอบทุกศุกร์</span></div>
+      <div class="step"><div class="n">2</div><b>เราสั่งหิ้ว</b><span>สั่งตรงจากเว็บต้นทางของแท้</span></div>
+      <div class="step"><div class="n">3</div><b>ของเข้า & QC</b><span>ตรวจสภาพทุกชิ้นก่อนแพ็ก</span></div>
+      <div class="step"><div class="n">4</div><b>ส่งถึงมือคุณ</b><span>แพ็กอย่างดี ส่งไว มีเลขแทร็ก</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="brandsec">
+  <div class="wrap">
+    <h2 class="sec-title">เราหิ้วจากที่ไหน</h2>
+    <p class="sec-sub">เฉพาะเว็บต้นทางที่น่าเชื่อถือ</p>
+    <div class="chips">
+      <div class="chip">Olive Young 🇰🇷</div>
+      <div class="chip">YesStyle 🇰🇷</div>
+      <div class="chip">Stylevana 🇰🇷</div>
+      <div class="chip">Lookfantastic 🇬🇧</div>
+      <div class="chip">iHerb 🇺🇸</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2 class="sec-title">สั่งซื้อ & ติดต่อเรา</h2>
+    <p class="sec-sub">ทักได้ทุกช่องทาง ตอบไว</p>
+    <div class="social">
+      <a href="#">🛒 Shopee<small>กดสั่งซื้อ</small></a>
+      <a href="#">🎵 TikTok Shop<small>กดสั่งซื้อ</small></a>
+      <a href="#">📘 Facebook<small>ทักแชต</small></a>
+      <a href="#">📸 Instagram<small>@kongprime</small></a>
+      <a href="#">💬 LINE<small>แอดไลน์</small></a>
+    </div>
+    <div class="note">แก้ลิงก์/ไอดีแต่ละช่องทางในไฟล์ index.html (มองหา href="#")</div>
+  </div>
+</section>
+
+<footer>
+  © 2026 KONG PRIME · พรีออเดอร์บิวตี้ของแท้ จากเว็บนอก<br>
+  ของแท้ 100% · QC ก่อนส่ง · ปิดรอบพรีทุกศุกร์
+</footer>
+
+</body>
+</html>

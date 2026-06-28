@@ -25,11 +25,7 @@
   .btn-rose:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(157,85,98,.42)}
   .btn-out{border:1.5px solid var(--rose);color:var(--rose-dk)}
   .btn-out:hover{background:var(--rose);color:#fff;border-color:var(--rose)}
-
-  /* announcement bar */
   .topbar{background:var(--mauve-dk);color:var(--champ-lt);text-align:center;font-size:13.5px;letter-spacing:.5px;padding:9px 16px;font-weight:600}
-
-  /* NAV */
   nav{position:sticky;top:0;z-index:60;background:rgba(255,249,245,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
   .nav-in{display:flex;align-items:center;justify-content:space-between;height:64px}
   .brandmark{font-family:'Playfair Display',serif;font-size:22px;font-weight:800;color:var(--mauve);letter-spacing:5px}
@@ -38,8 +34,6 @@
   .nav-links a:hover{color:var(--rose-dk)}
   .menu-cta{background:var(--rose);color:#fff!important;padding:9px 22px;border-radius:30px;font-weight:600}
   @media(max-width:780px){.nav-links a:not(.menu-cta){display:none}}
-
-  /* HERO — princess luxe (light) */
   .hero{position:relative;text-align:center;padding:104px 0 92px;color:var(--mauve);overflow:hidden;
         background:radial-gradient(120% 130% at 50% 0%, #ffffff 0%, var(--blush) 52%, #ecc8cf 100%)}
   .hero::before{content:"";position:absolute;inset:0;background:
@@ -51,11 +45,10 @@
   @keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
   .eyebrow{display:inline-block;border:1px solid var(--rose-lt);color:var(--rose-dk);
      border-radius:40px;padding:7px 18px;font-size:13px;letter-spacing:2px;margin-bottom:26px;font-weight:600;background:rgba(255,255,255,.5)}
-  .logo-slot{width:108px;height:108px;margin:0 auto 24px;border-radius:50%;background:#fff;
+  .logo-slot{width:112px;height:112px;margin:0 auto 24px;border-radius:50%;background:var(--cream);
      border:2px solid var(--champ);display:flex;align-items:center;justify-content:center;overflow:hidden;
      box-shadow:0 12px 40px rgba(157,85,98,.22)}
-  .logo-slot img{width:100%;height:100%;object-fit:cover}
-  .logo-fallback{display:none;font-family:'Playfair Display',serif;font-weight:800;color:var(--rose-dk);font-size:18px;letter-spacing:1px}
+  .logo-slot svg{width:84px;height:84px;display:block}
   .hero h1{font-size:64px;font-weight:800;letter-spacing:10px;line-height:1.1;color:var(--mauve);
      background:linear-gradient(135deg,var(--rose-dk),var(--rose) 55%,var(--champ));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
   .divider{width:64px;height:2px;background:var(--champ);margin:20px auto 18px;border-radius:2px}
@@ -63,23 +56,17 @@
   .hero .trust{color:var(--mauve);opacity:.78;margin-top:14px;font-size:15px;letter-spacing:.5px}
   .hero .cta{margin-top:38px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
   @media(max-width:600px){.hero h1{font-size:42px;letter-spacing:6px}.hero{padding:78px 0 66px}}
-
-  /* STATS strip */
   .stats{background:var(--mauve);color:#fff;padding:0}
   .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1px}
   @media(max-width:680px){.stats .wrap{grid-template-columns:1fr 1fr}}
   .stat{text-align:center;padding:26px 12px}
   .stat b{display:block;font-family:'Playfair Display',serif;font-size:26px;color:var(--champ-lt)}
   .stat span{font-size:13px;color:rgba(255,255,255,.68)}
-
   section{padding:84px 0}
   .sec-title{text-align:center;font-size:36px;font-weight:700;color:var(--mauve);margin-bottom:8px}
   .sec-sub{text-align:center;color:var(--muted);margin-bottom:50px;font-size:16px}
-
   .reveal{opacity:0;transform:translateY(26px);transition:.7s cubic-bezier(.2,.7,.2,1)}
   .reveal.in{opacity:1;transform:none}
-
-  /* cards */
   .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
   @media(max-width:780px){.cards{grid-template-columns:1fr}}
   .card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:36px 28px;text-align:center;
@@ -89,8 +76,6 @@
   .card .ic{font-size:34px}
   .card h3{font-size:21px;color:var(--rose-dk);margin:14px 0 8px}
   .card p{color:var(--muted);font-size:15px}
-
-  /* steps */
   .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
   @media(max-width:780px){.steps{grid-template-columns:1fr 1fr}}
   .step{background:var(--cream);border:1px solid var(--line);border-radius:18px;padding:30px 18px;text-align:center;transition:.3s}
@@ -100,34 +85,25 @@
      box-shadow:0 6px 16px rgba(157,85,98,.3)}
   .step b{display:block;color:var(--mauve);margin-bottom:4px;font-size:16px}
   .step span{color:var(--muted);font-size:14px}
-
-  /* brands */
   .brandsec{background:radial-gradient(120% 120% at 50% 0,#ecc8cf,var(--blush) 60%);color:var(--mauve)}
   .brandsec .sec-title{color:var(--mauve)}
   .brandsec .sec-sub{color:var(--rose-dk)}
   .chips{display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
   .chip{border:1px solid var(--rose-lt);background:rgba(255,255,255,.45);border-radius:40px;padding:13px 28px;font-weight:600;letter-spacing:.5px;transition:.25s}
   .chip:hover{background:#fff;border-color:var(--rose)}
-
-  /* CTA band */
   .ctaband{background:linear-gradient(135deg,var(--rose) 0%,var(--rose-dk) 100%);color:#fff;text-align:center}
   .ctaband h2{font-size:34px;font-weight:800;margin-bottom:10px}
   .ctaband p{opacity:.92;margin-bottom:28px}
-
-  /* contact */
   .social{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:28px}
   .social a{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 28px;font-weight:600;color:var(--mauve);min-width:150px;text-align:center;transition:.25s}
   .social a:hover{border-color:var(--rose);transform:translateY(-3px);box-shadow:0 12px 26px rgba(92,58,63,.10)}
   .social a small{display:block;color:var(--muted);font-weight:400;font-size:12px;margin-top:3px}
-
   footer{background:var(--mauve-dk);color:#cdb6ba;text-align:center;padding:40px 0;font-size:14px}
   footer .fb{font-family:'Playfair Display',serif;font-size:22px;font-weight:800;color:var(--champ-lt);letter-spacing:5px;margin-bottom:8px}
 </style>
 </head>
 <body>
-
 <div class="topbar">✨ เปิดรับพรีออเดอร์แล้ว · ปิดรอบทุกศุกร์ · ของแท้ 100% หิ้วตรงจากเว็บนอก</div>
-
 <nav>
   <div class="wrap nav-in">
     <div class="brandmark">BELSOMI</div>
@@ -140,15 +116,21 @@
     </div>
   </div>
 </nav>
-
-<!-- HERO -->
 <header class="hero">
   <span class="glow a"></span><span class="glow b"></span>
   <div class="wrap inner">
     <span class="eyebrow">TIMELESS ELEGANCE IN K-BEAUTY</span>
     <div class="logo-slot">
-      <img src="assets/logo.png" alt="BELSOMI logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="logo-fallback">BELSOMI</div>
+      <svg viewBox="0 0 100 100" role="img" aria-label="BELSOMI emblem">
+        <defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#9d5562"/><stop offset="0.5" stop-color="#B76E79"/><stop offset="1" stop-color="#D4AF7A"/>
+        </linearGradient></defs>
+        <g fill="url(#rg)">
+          <path d="M59 18 q11 3 8.5 13.5 q-11 -3 -8.5 -13.5 z"/>
+          <path d="M41 82 q-11 -3 -8.5 -13.5 q11 3 8.5 13.5 z"/>
+        </g>
+        <text x="50" y="73" text-anchor="middle" font-family="'Playfair Display',serif" font-size="66" font-weight="700" font-style="italic" fill="url(#rg)">S</text>
+      </svg>
     </div>
     <h1>BELSOMI</h1>
     <div class="divider"></div>
@@ -160,8 +142,6 @@
     </div>
   </div>
 </header>
-
-<!-- STATS -->
 <div class="stats">
   <div class="wrap">
     <div class="stat"><b>100%</b><span>ของแท้ การันตี</span></div>
@@ -170,8 +150,6 @@
     <div class="stat"><b>ทุกศุกร์</b><span>ปิดรอบพรีออเดอร์</span></div>
   </div>
 </div>
-
-<!-- ABOUT -->
 <section id="about">
   <div class="wrap reveal" style="max-width:780px;text-align:center">
     <h2 class="sec-title">เกี่ยวกับเรา</h2>
@@ -183,8 +161,6 @@
     </p>
   </div>
 </section>
-
-<!-- WHY -->
 <section id="why" style="background:#fff">
   <div class="wrap">
     <h2 class="sec-title reveal">ทำไมต้องเรา</h2>
@@ -196,8 +172,6 @@
     </div>
   </div>
 </section>
-
-<!-- HOW -->
 <section id="how">
   <div class="wrap">
     <h2 class="sec-title reveal">พรีออเดอร์ทำงานยังไง</h2>
@@ -210,8 +184,6 @@
     </div>
   </div>
 </section>
-
-<!-- BRANDS -->
 <section class="brandsec">
   <div class="wrap">
     <h2 class="sec-title reveal">เราหิ้วจากที่ไหน</h2>
@@ -225,8 +197,6 @@
     </div>
   </div>
 </section>
-
-<!-- CTA BAND -->
 <section class="ctaband">
   <div class="wrap reveal">
     <h2>พร้อมได้ของดีก่อนใครหรือยัง?</h2>
@@ -234,8 +204,6 @@
     <a href="#contact" class="btn btn-out" style="border-color:#fff;color:#fff">ทักแชต / สั่งซื้อ →</a>
   </div>
 </section>
-
-<!-- CONTACT -->
 <section id="contact" style="text-align:center">
   <div class="wrap">
     <h2 class="sec-title reveal">สั่งซื้อ &amp; ติดต่อเรา</h2>
@@ -249,13 +217,11 @@
     </div>
   </div>
 </section>
-
 <footer>
   <div class="fb">BELSOMI</div>
   พรีออเดอร์บิวตี้ของแท้ จากเว็บนอก · ของแท้ 100% · QC ก่อนส่ง · ปิดรอบพรีทุกศุกร์<br>
   <span style="opacity:.7">© 2026 BELSOMI · belsomi.shop</span>
 </footer>
-
 <script>
   const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
   document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%3*0.08)+'s';io.observe(el)});
